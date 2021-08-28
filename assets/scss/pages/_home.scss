@@ -1,0 +1,76 @@
+header{
+    height: 100vh;
+    background-image: url(../images/slideshow-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    nav{
+        padding: 30px 0;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100000;
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .nav__list{
+                .nav__menu{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .list__item{
+                        margin-right: 30px;
+                        a{
+                            color: #fff;
+                            font-size: 13px;
+                            font-weight: 600;
+                            transition: all 0.25s ease-in-out;
+                            &.active, &:hover{
+                                color: $orangeColor;
+                            }
+                        }
+                    }
+                    .social-icons{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        span{
+                            cursor: pointer;
+                            font-size: 20px;
+                            margin-right: 10px;
+                            color: #fff;
+                            transition: all 0.25s ease-in-out;
+                            &:hover{
+                                color: $orangeColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .home-carousel{
+        .slide-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            h1{
+                font-weight: 900;
+                color: #fff;
+                font-size: 70px;
+                text-align: center;
+                width: 65%;
+                line-height: 1;
+            }
+        }
+    }
+}

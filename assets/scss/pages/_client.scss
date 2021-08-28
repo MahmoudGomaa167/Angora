@@ -1,0 +1,67 @@
+.client-section{
+    padding: 100px 0;
+    .container{
+        .image-carousel{
+            width: 70%;
+            margin: auto;
+            margin-bottom: 20px;
+            .slick-list{
+                overflow: hidden;
+                padding: 0;
+                .slick-slide{
+                    text-align: center;
+                    img{
+                        border-radius: 50%;
+                        cursor: pointer;
+                        padding: 12px;
+                        margin-bottom: 10px;
+                        opacity: 0.5;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    h3{
+                        font-size: 16px;
+                        text-align: center;
+                        opacity: 0;
+                        visibility: hidden;
+                        font-weight: 700;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    span{
+                        color: $grayColor;
+                        font-size: 14px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                .slick-center{
+                    img{
+                        padding: 0;
+                        opacity: 1;
+                    }
+                    h3{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    span{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            
+        }
+        .opinions-carousel{
+            text-align: center;
+            margin: auto;
+            width: 60%;
+            font-size: 25px;
+            color: $grayColor;
+            line-height: 1.5;
+            .slick-list{
+                overflow: hidden;
+                padding: 0;
+            }
+        }
+    }
+}

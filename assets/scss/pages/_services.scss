@@ -1,0 +1,47 @@
+.services-section{
+    background-color: $grayBackgroundColor;
+    padding: 100px 0;
+    .container{
+        .services-item{
+            display: flex;
+            align-items: flex-start;
+            padding: 0 15px;
+            margin-bottom: 30px;
+            .services-icon{
+                font-size: 32px;
+                margin-right: 20px;
+                display: flex;
+                span{
+                    &::before{
+                        color: $orangeColor;
+                    }
+                }
+            }
+            .services-info{
+                h5{
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    color: $blackColor;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1.75;
+                    transition: all 0.25s ease-in-out;
+                }
+                p{
+                    color: $grayColor;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 1.75;
+                }
+            }
+            &:hover{
+                .services-info{
+                    h5{
+                        color: $orangeColor;
+                    }
+                }
+            }
+        }
+    }
+}

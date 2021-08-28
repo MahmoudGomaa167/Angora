@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import 'variables';
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    scroll-behavior: auto;
+}
+
+.container{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    max-width: 1170px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+.slide-button{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    .next, .prev{
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-left: none;
+        color: #fff;
+        font-size: 22px;
+        padding: 3px 10px;
+        cursor: pointer;
+        min-width: 50px;
+        min-height: 50px;
+        transition: all 0.25s ease-in-out;
+        position: relative;
+       .white-overlay{
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-radius: 0 3px 3px 0;
+            z-index: -1;
+            transition: all 0.25s ease-in-out;
+        }
+        &:hover{
+            color: $orangeColor;
+            .white-overlay{
+                width: 100%;
+            }  
+        }
+    }
+    .prev{
+        border-radius: 0 3px 0 0;
+    }
+    .next{
+        border-radius: 0 0 3px 0;
+    }
+}
+
+.color-box{
+    position: fixed;
+    top: 25%;
+    background-color: #fff;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    max-width: 250px;
+    left: -250px;
+    padding: 15px;
+    transition: all 0.4s ease-in-out;
+    h5{
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .color-list{
+        display: flex;
+        align-items: center;
+        span{
+            width: 25px;
+            height: 25px;
+            margin-right: 3px;
+            border-radius: 4px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+        .dark-orange{
+            background-color: $orangeColor;
+        }
+        .blue{
+            background-color: #4e9cb5;
+        }
+        .green{
+            background-color: #24bca4;
+        }
+        .aqua{
+            background-color: #46cad7;
+        }
+        .pink{
+            background-color: #c86f98;
+        }
+        .orange{
+            background-color: #ee8f67;
+        }
+        .yellow{
+            background-color: #e4d20c;
+        }
+        .navy{
+            background-color: #6b798f;
+        }
+    }
+    .icon-cogs{
+        background-color: #1F2528;
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: -40px;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+        &:hover{
+            background-color: #434343;
+        }
+    }
+}
+
+
+.mouse{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 26px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 13px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        border: 1px solid $orangeColor;
+        .wheel{
+            background-color: $orangeColor;
+        }
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 40px;
+        color: #fff;
+        
+        .wheel{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+            animation: move 1.5s ease-in-out infinite;
+        }
+    }
+
+    @keyframes move {
+        0% {top: 6px; opacity: 0;}
+        30% {opacity: 1;}
+        100% {top: 18px; opacity: 0;}
+    }
+}
+
+.section-header{
+    position: relative;
+    .section-title{
+        font-size: 38px;
+        font-weight: 900;
+        color: $blackColor;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px;
+        padding: 15px;
+        text-align: center;
+        .letter{
+            position: absolute;
+            z-index: -1;
+            top: -17px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 70px;
+            font-weight: 900;
+            color: #eee;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 0.5px;
+            background-color: #000;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    .section-description{
+        color: #999999;
+        font-size: 18px;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    
+    &:hover{
+        .section-title{
+            &::after{
+                width: 80px;
+            }
+        }
+    }
+}
+
+.row > *{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.custom-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $orangeColor;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+    padding: 18px 30px;
+    font-weight: 700;
+    transition: all 0.25s ease-in-out;
+    &:hover{
+        background-color: #f38383;
+    }
+}
+
+.footer-tag{
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+    padding: 2px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        color: $orangeColor;
+        border-color: $orangeColor;
+    }
+}
+
+.goup{
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $orangeColor;
+    opacity: 0.5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    span{
+        &::before{
+            font-size: 18px;
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+    &:hover{
+        opacity: 1;
+    }
+}

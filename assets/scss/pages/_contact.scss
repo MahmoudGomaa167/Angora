@@ -1,0 +1,103 @@
+.contact-section{
+    background-color: $grayBackgroundColor;
+    padding: 100px 0;
+    .container{
+        .contact-item{
+            &:nth-of-type(1){
+                padding: 0 15px;
+                h2{
+                    color: $blackColor;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 1;
+                    margin-bottom: 30px;
+                }
+                .contact-info{
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 25px 0;
+                    border-bottom: 1px solid #eee;
+                    span{
+                        display: flex;
+                        &::before{
+                            font-size: 40px;
+                            color: $orangeColor;
+                            margin-right: 20px;
+                        }
+                    }
+                    h3{
+                        color: $blackColor;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 24px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    p{
+                        color: $grayColor;
+                        font-size: 14px;
+                        font-weight: 100;
+                    }
+                    a{
+                        color: $grayColor;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            color: $orangeColor;
+                        }
+                    }
+                    &:last-of-type{
+                        border-bottom: none;
+                    }
+                    &:hover{
+                        h3{
+                            color: $orangeColor;
+                        }
+                    }
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                        margin-bottom: 20px;
+                        border: 2px solid #eee;
+                        padding: 14px 18px;
+                        color: #a6a6a6;
+                        border-radius: 3px;
+                        transition: all 0.3s ease-in-out;
+                        font-size: 14px;
+                        &::placeholder{
+                            color: #a6a6a6;
+                        }
+                        &:focus{
+                            border: 2px solid $orangeColor;
+                            outline: none;
+                        }
+                    }
+                    textarea{
+                        border: 2px solid #eee;
+                        padding: 14px 18px;
+                        color: #a6a6a6;
+                        border-radius: 3px;
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                        transition: all 0.3s ease-in-out;
+                        &::placeholder{
+                            color: #a6a6a6;
+                        }
+                        &:focus{
+                            border: 2px solid $orangeColor;
+                            outline: none;
+                        }
+                    }
+                    .send-button{
+                        .custom-button{
+                            span{
+                                margin-right: 5px;
+                            }
+                         }
+                    }
+                }
+            }
+        }
+
+    }
+}

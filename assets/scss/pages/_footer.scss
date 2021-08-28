@@ -1,0 +1,102 @@
+footer{
+    background-color: $footerLinksBackgroundColor;
+    background-image: url(../images/dotted-map.png);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: left center;
+    color: #b0b0b0;
+    position: relative;
+    .footer-links{
+        padding: 60px 0;
+        position: relative;
+        .container{
+            .logo{
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .footer-item{
+                padding: 0 15px;
+                h4{
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    font-weight: 600;
+                    color: #fff;
+                }
+                p{
+                    line-height: 1.75;
+                    font-size: 14px;
+                    &:first-of-type{
+                        margin-bottom: 10px;
+                    }
+                    a{
+                        color: #b0b0b0;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            color: $orangeColor;
+                        }
+                    }
+                }
+                ul{
+                    li{
+                        a{
+                            font-size: 14px;
+                            color: #b0b0b0;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                color: $orangeColor;
+                            }
+                        }
+                    }
+                }
+                .tags{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+    .copyright{
+        background-color: #1a1a1a;
+        padding: 30px 0;
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .social-icons{
+                display: flex;
+                align-items: center;
+                a{
+                    color: #fff;
+                    margin-right: 10px;
+                    transition: all 0.3s ease-in-out;
+                    span{
+                        &::before{
+                            font-size: 24px;
+                            
+                        }
+                    }
+                    &:hover{
+                        color: $orangeColor;
+                    }
+                }
+            }
+            .copyright-info{
+                color: #b0b0b0;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+        .developer{
+            text-align: center;
+            color: #b0b0b0;
+            font-size: 18px;
+            span{
+                color: $orangeColor;
+            }
+        }
+    }
+}
