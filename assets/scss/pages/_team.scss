@@ -13,7 +13,7 @@
                     border-radius: 4px;
                     transition: all 0.3s ease-in-out;
                 }
-                .orange-overlay{
+                .overlay{
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -51,8 +51,8 @@
                 img{
                     transform: scale(1.2, 1.2);
                 }
-                .orange-overlay{
-                    opacity: 1;
+                .overlay{
+                    opacity: 0.8;
                 }
                 .team-title{
                     color: $orangeColor;

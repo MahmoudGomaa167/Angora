@@ -17,13 +17,12 @@
                     align-items: flex-start;
                     padding: 25px 0;
                     border-bottom: 1px solid #eee;
-                    span{
+                    .icon{
                         display: flex;
-                        &::before{
-                            font-size: 40px;
-                            color: $orangeColor;
-                            margin-right: 20px;
-                        }
+                        font-size: 40px;
+                        color: $orangeColor;
+                        margin-right: 20px;
+                        transition: all 0.25s ease-in-out;
                     }
                     h3{
                         color: $blackColor;

@@ -29,17 +29,19 @@
                 }
             }
             .custom-progress{
-                flex-direction: 0 0 100%;
+                flex: 0 0 100%;
                 background-color: #eee;
                 height: 4px;
                 width: 100%;
                 position: relative;
-                span{
+                .progress{
                     position: absolute;
                     height: 4px;
                     background-color: $orangeColor;
                     left: 0;
                     top: 0;
+                    transition: all 0.5s ease-in-out;
+                    transition: width 1s ease-in-out;
                 }
             }
             &:nth-of-type(1){

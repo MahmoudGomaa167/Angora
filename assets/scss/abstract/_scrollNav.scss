@@ -1,0 +1,29 @@
+header{
+    .scroll-nav{
+        position: fixed;
+        top: -100px;
+        // top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000000;
+        background-color: #fff;
+        transition: top 1s ease-in-out;
+        .container{
+            .nav__list{
+                .nav__menu{
+                    .list__item{
+                        a{
+                            color: $blackColor;
+                        }
+                    }
+                    .social-icons{
+                        a{
+                            color: $blackColor;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

@@ -96,6 +96,7 @@ footer{
             font-size: 18px;
             span{
                 color: $orangeColor;
+                transition: all 0.25s ease-in-out;
             }
         }
     }

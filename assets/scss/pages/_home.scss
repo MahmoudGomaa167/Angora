@@ -12,6 +12,8 @@ header{
         left: 0;
         right: 0;
         z-index: 100000;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
         .container{
             display: flex;
             align-items: center;
@@ -37,8 +39,7 @@ header{
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        span{
-                            cursor: pointer;
+                        a{
                             font-size: 20px;
                             margin-right: 10px;
                             color: #fff;
