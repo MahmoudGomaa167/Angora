@@ -63,7 +63,6 @@ $(document).ready(function () {
     ]
   });
 
-
   // Show White navbar on scroll
   const whiteNav = function () {
     $(window).scroll(function () {
@@ -78,7 +77,6 @@ $(document).ready(function () {
       }
     })
   }
-
 
   // Scroll to section on links click
   const sectionScroll = function () {
@@ -156,7 +154,6 @@ $(document).ready(function () {
 
   }
 
-
   // Click on Gears icon to show options box
   const options = function () {
     $('.icon-cogs').click(function () {
@@ -178,7 +175,6 @@ $(document).ready(function () {
   // Change Color of Website based on color list
   const changeColor = function () {
     let colorList = document.querySelectorAll('.color-item');
-
 
     colorList.forEach(function (color) {
       let dataColor = $(color).attr('data-color');
@@ -213,8 +209,6 @@ $(document).ready(function () {
             }
           })
         })
-
-
 
 
         $('.mouse').hover(function () {
@@ -298,7 +292,6 @@ $(document).ready(function () {
 
   }
 
-
   // Progress on scroll to about section
   const progress = function () {
     let progressElements = document.querySelectorAll('.progress');
@@ -325,6 +318,86 @@ $(document).ready(function () {
     })
   }
 
+  // Home Slider
+  const slider = function(){
+    const imagesList = document.querySelectorAll('.image-slide');
+    let imageSrcArr = [];
+    let introHeaders = document.querySelectorAll('.intro-header');
+    let introHeadersArr = [];
+    let index = 0;
+  
+    // Headers Array List
+    introHeaders.forEach(function(header){
+      let content = $(header).html();
+      introHeadersArr.push(content);
+    });
+  
+    // Images Array List
+   imagesList.forEach(function(image){
+     let imageSrc = $(image).attr('src')
+     imageSrcArr.push(imageSrc);
+   });
+
+   // Add active class on headers
+   function addActive(){
+     $(introHeaders[index]).addClass('active-content');
+     $(introHeaders[index]).siblings().removeClass('active-content')
+   }
+  
+   // Run slider 
+   function run(){
+     index++;
+     changeImage();
+     addActive();
+   }
+  
+   // change Image Function
+   function changeImage(){
+    if(index > imageSrcArr.length - 1){
+      index = 0;
+    }else if(index < 0){
+      index = imageSrcArr.length - 1;
+    }
+    $('header').css({backgroundImage: `url(${imageSrcArr[index]})`});
+    $('.intro-header').html(introHeadersArr[index]);
+    addActive();
+   }
+  
+   // Change Image every 5 seconds
+   let interval = setInterval(run, 5000);
+  
+   // Reset Interval Function on click on next and prev buttons
+   function resetInterval(){
+     clearInterval(interval);
+     interval = setInterval(run, 5000);
+     addActive();
+   }
+  
+   // Next Function
+  function next(){
+    resetInterval();
+    index++;
+    changeImage();
+  }
+
+  // Prev Function
+  function prev(){
+    resetInterval();
+    index--;
+    changeImage();
+  }
+  
+  $('.next').click(next);
+  
+  $('.prev').click(prev);
+  }
+  
+
+
+  
+  
+
+  
 
   whiteNav();
   sectionScroll();
@@ -334,4 +407,5 @@ $(document).ready(function () {
   options();
   changeColor();
   progress();
+  slider();
 })

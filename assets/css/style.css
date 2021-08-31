@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, p {
 .slide-button {
   display: inline-flex;
   flex-direction: column;
-  position: relative;
+  position: absolute;
   z-index: 100;
   top: 50%;
   transform: translateY(-50%); }
@@ -277,10 +277,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 header {
   height: 100vh;
+  position: relative;
   background-image: url(../images/slideshow-1.jpg);
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: background-image 1s ease-in-out; }
   header nav {
     padding: 30px 0;
     border-bottom: 1px solid #fff;
@@ -319,23 +322,42 @@ header {
             transition: all 0.25s ease-in-out; }
             header nav .container .nav__list .nav__menu .social-icons a:hover {
               color: #F25454; }
-  header .home-carousel .slide-content {
+  header .home-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     margin: auto; }
-    header .home-carousel .slide-content h1 {
+    header .home-carousel .intro-header {
+      position: absolute;
       font-weight: 900;
       color: #fff;
       font-size: 70px;
       text-align: center;
-      width: 65%;
-      line-height: 1; }
-
+      line-height: 1;
+      left: 150%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      margin: auto;
+      display: none;
+      transition: all 1s ease-in-out; }
+    header .home-carousel .active-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      animation: fadeFromRight 1s 1s linear forwards; }
+@keyframes fadeFromRight {
+  0% {
+    left: 200%;
+    opacity: 0; }
+  100% {
+    left: 50%;
+    opacity: 1; } }
 .about-section {
   padding: 100px 0; }
   .about-section .container .about-description {
