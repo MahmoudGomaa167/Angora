@@ -54,6 +54,25 @@ header{
                     }
                 }
             }
+            .nav-toogle{
+                display: none;
+                .toggler{
+                    background: none;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 22px;
+                    transition: all 0.25s ease-in-out;
+                    &:hover{
+                        color: $orangeColor;
+                    }
+                }
+                .scroll-toggler{
+                    color: $blackColor;
+                }
+            }
         }
     }
     
@@ -79,7 +98,6 @@ header{
                 margin: auto;
                 display: none;
                 transition: all 1s ease-in-out;
-                // opacity: 0;
             }
             .active-content{
                 display: flex;
@@ -94,5 +112,67 @@ header{
                 100%{left: 50%; opacity: 1;}
             }
         
+    }
+}
+
+@media screen and (max-width: 768px){
+    header{
+        nav{
+            .container{
+                .nav__list{
+                    .nav__menu{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        position: fixed;
+                        top: 86px;
+                        background-color: #fff;
+                        width: 100%;
+                        left: 0;
+                        padding: 0 20px;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+                        transition: all 0.5s ease-in-out;
+                        visibility: hidden;
+                        opacity: 0;
+                            .list__item{
+                                margin-right: 0;
+                                margin: 15px 0;
+                                a{
+                                    color: $blackColor;
+                                    font-size: 16px;
+                                }
+                            }
+                            .social-icons{
+                                position: absolute;
+                                right: 15px;
+                                top: 30px;
+                                a{
+                                    color: $blackColor;
+                                }
+                            }
+                    }
+
+                    .show-menu{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .nav-toogle{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    header{
+        .home-carousel{
+            .intro-header{
+                font-size: 48px;
+            }
+        }
     }
 }

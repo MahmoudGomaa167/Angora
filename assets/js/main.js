@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+  $('.loading-page').animate({
+    opacity: '0',
+    'z-index': '-1'
+  }, 500)
+
   // Blog Carousel
   $('.opinions-carousel').slick({
     centerMode: true,
@@ -14,7 +20,7 @@ $(document).ready(function () {
           arrows: false,
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },
       {
@@ -184,6 +190,12 @@ $(document).ready(function () {
         $('.goup').css('background-color', `${dataColor}`);
         $('.custom-button').css('background-color', dataColor);
         $('.progress').css('background-color', dataColor);
+
+        $('.toggler').hover(function(){
+          $(this).css('color', dataColor);
+        }, function(){
+          $(this).hasClass('scroll-toggler') ? $(this).css('color', '#282828') : $(this).css('color', '#fff')
+        })
 
 
         $('.list__link.active').css('color',dataColor);
@@ -392,7 +404,19 @@ $(document).ready(function () {
   $('.prev').click(prev);
   }
   
+// Nav Toggler
+const showMenu = function(){
+  $('.show-menu').animate({
+    opacity: '1'
+  }, 500)
+  $('.toggler').click(function(){
+    $('.nav__menu').toggleClass('show-menu');
+  });
 
+  $(window).scroll(function(){
+    $('.nav__menu').removeClass('show-menu');
+  });
+}
 
   
   
@@ -408,4 +432,5 @@ $(document).ready(function () {
   changeColor();
   progress();
   slider();
+  showMenu();
 })

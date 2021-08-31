@@ -15,7 +15,6 @@ footer{
                 margin-bottom: 40px;
             }
             .footer-item{
-                padding: 0 15px;
                 h4{
                     font-size: 20px;
                     margin-bottom: 20px;
@@ -97,6 +96,30 @@ footer{
             span{
                 color: $orangeColor;
                 transition: all 0.25s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    footer{
+        .footer-links{
+            .container{
+                .footer-item{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .copyright{
+            .container{
+                flex-direction: column;
+                .social-icons{
+                    flex: 0 0 100%;
+                    margin-bottom: 15px;
+                }
+                .copyright-info{
+                    margin-bottom: 10px;
+                }
             }
         }
     }

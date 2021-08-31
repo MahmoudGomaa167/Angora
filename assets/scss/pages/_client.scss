@@ -65,3 +65,55 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px){
+    .client-section{
+        .container{
+            .opinions-carousel{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .client-section{
+        padding: 60px 0;
+        .container{
+            .image-carousel{
+                .slick-list{
+                    .slick-slide{
+                        h3{
+                            width: 79%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+            .opinions-carousel{
+                width: 80%;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .client-section{
+        .container{
+            .image-carousel{
+                .slick-list{
+                    .slick-slide{
+                        h3{
+                            width: 78%;
+                        }
+                    }
+                }
+            }
+            .opinions-carousel{
+                width: 100%;
+                font-size: 20px;
+            }
+        }
+    }
+}

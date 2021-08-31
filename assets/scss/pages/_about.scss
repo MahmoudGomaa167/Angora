@@ -70,3 +70,14 @@
         }
     }
 }
+
+@media screen and (max-width: 768px){
+    .about-section{
+        padding: 60px 0;
+        .container{
+            .about-description{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

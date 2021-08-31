@@ -2,7 +2,6 @@
     padding: 100px 0;
     .container{
         .team-item{
-            padding: 0 15px;
             .team-image{
                 position: relative;
                 border-radius: 4px;
@@ -57,6 +56,17 @@
                 .team-title{
                     color: $orangeColor;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .team-section{
+        padding: 60px 0;
+        .container{
+            .team-item{
+                margin-bottom: 30px;
             }
         }
     }
