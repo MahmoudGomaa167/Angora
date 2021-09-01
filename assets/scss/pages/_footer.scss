@@ -101,6 +101,18 @@ footer{
     }
 }
 
+@media screen and (max-width: 768px){
+    footer{
+        .footer-links{
+            .container{
+                .footer-item{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 480px){
     footer{
         .footer-links{
@@ -121,6 +133,16 @@ footer{
                     margin-bottom: 10px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 326px){
+    footer{
+        .copyright{
+            .developer{
+                font-size: 14px;
+            } 
         }
     }
 }

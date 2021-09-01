@@ -291,6 +291,9 @@ h1, h2, h3, h4, h5, h6, p {
   .section-header .section-description {
     width: 100%;
     font-size: 17px; } }
+@media screen and (max-width: 326px) {
+  .section-header .section-title {
+    font-size: 36px; } }
 header {
   height: 100vh;
   position: relative;
@@ -425,7 +428,7 @@ header {
     display: flex; } }
 @media screen and (max-width: 480px) {
   header .home-carousel .intro-header {
-    font-size: 48px; } }
+    font-size: 36px; } }
 .about-section {
   padding: 100px 0; }
   .about-section .container .about-description {
@@ -648,6 +651,9 @@ header {
   .client-section .container .opinions-carousel {
     width: 100%;
     font-size: 20px; } }
+@media screen and (max-width: 326px) {
+  .client-section .container .opinions-carousel {
+    font-size: 16px; } }
 .contact-section {
   background-color: #FAFAFA;
   padding: 100px 0; }
@@ -733,6 +739,12 @@ header {
   .contact-section .container .contact-item:nth-of-type(1) h2 {
     width: 100%;
     font-size: 29px; } }
+@media screen and (max-width: 326px) {
+  .contact-section .container .contact-item:nth-of-type(1) h2 {
+    width: 100%;
+    font-size: 23px; }
+  .contact-section .container .contact-item:nth-of-type(1) .contact-info p {
+    font-size: 12px; } }
 footer {
   background-color: #222222;
   background-image: url(../images/dotted-map.png);
@@ -804,6 +816,9 @@ footer {
         color: #F25454;
         transition: all 0.25s ease-in-out; }
 
+@media screen and (max-width: 768px) {
+  footer .footer-links .container .footer-item {
+    margin-bottom: 30px; } }
 @media screen and (max-width: 480px) {
   footer .footer-links .container .footer-item {
     margin-bottom: 30px; }
@@ -814,5 +829,8 @@ footer {
       margin-bottom: 15px; }
     footer .copyright .container .copyright-info {
       margin-bottom: 10px; } }
+@media screen and (max-width: 326px) {
+  footer .copyright .developer {
+    font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */

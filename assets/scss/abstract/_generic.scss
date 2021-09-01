@@ -257,11 +257,6 @@ h1,h2,h3,h4,h5,h6,p{
     }
 }
 
-// .row > *{
-//     padding-left: 0;
-//     padding-right: 0;
-// }
-
 .custom-button{
     display: flex;
     align-items: center;
@@ -349,6 +344,14 @@ h1,h2,h3,h4,h5,h6,p{
         .section-description{
             width: 100%;
             font-size: 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 326px){
+    .section-header{
+        .section-title{
+            font-size: 36px;
         }
     }
 }
